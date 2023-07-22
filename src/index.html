@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HomeWork11</title>
+    <title>HomeWork 11</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -14,15 +14,16 @@
       <form class="search-form" id="search-form">
         <input
           type="text"
-          name="searchQuery"
+          id="searchQuery"
           autocomplete="off"
-          placeholder="Search images..."
+          placeholder="Поиск изображений..."
         />
-        <button type="submit">Search</button>
+        <button type="submit" id="search-button" disabled>Search</button>
       </form>
       <div class="gallery"></div>
       <button type="button" class="load-more hidden">Load more</button>
     </main>
-    <script src="index.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/api.js" type="module"></script>
   </body>
 </html>
