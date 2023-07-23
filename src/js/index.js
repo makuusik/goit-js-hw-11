@@ -44,7 +44,6 @@ async function handleResponse(data) {
     } else {
       showLoadMoreBtn();
     }
-    currentPage++;
     totalHits = data.totalHits;
   }
 }
@@ -70,8 +69,7 @@ async function loadMoreImages() {
   }
 
   try {
-    const data = await fetchImages(currentQuery, currentPage, perPage);
-
+    const data = await fetchImages(currentQuery, currentPage + 1, perPage);
     if (data.hits.length > 0) {
       displayImages(data.hits);
       currentPage++;
