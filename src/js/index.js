@@ -73,6 +73,11 @@ async function loadMoreImages() {
     if (data.hits.length > 0) {
       displayImages(data.hits);
       currentPage++;
+
+      if (currentPage >= Math.ceil(totalHits / perPage)) {
+        hideLoadMoreBtn();
+        Notiflix.Notify.success('Все изображения успешно загружены!');
+      }
     } else {
       hideLoadMoreBtn();
       Notiflix.Notify.info('Мы достигли конца результатов поиска.');
